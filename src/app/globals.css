@@ -7,17 +7,28 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.btn-gradient {
+  background: linear-gradient(
+    175deg,
+    rgba(242, 83, 83, 1) 0%,
+    rgba(113, 9, 9, 1) 100%
+  );
 }
 
 @layer utilities {
