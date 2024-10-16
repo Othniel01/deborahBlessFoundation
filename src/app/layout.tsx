@@ -11,9 +11,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title:
-    "Clean UI - React, Next.JS, TailwindCSS, Sass, MongoDB, Flutter, Vue.JS, React Native, Javascript",
-  description:
-    "React, Next.JS, TailwindCSS, Sass, MongoDB, Flutter, Vue.JS, React Native, Javascript",
+    "Deborah Bless Foundation - EMPOWERING LIVES, FIGHTING MALNUTRITION, REDUCING CHILD MORTALITY",
+  description: "We Are On A Life Changing Mission To Reduce Child Mortality",
 };
 
 export default function RootLayout({
