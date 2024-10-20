@@ -98,7 +98,7 @@ export default function SectionTwo() {
             <Image
               src={"/image/image-two.png"}
               alt="Cover Image"
-              className=" filter grayscale absolute bottom-[-5px] left-[20px] w-[263px] h-[260px] object-cover rounded-[15px]"
+              className=" filter grayscale absolute bottom-[-5px] z-10 left-[20px] w-[263px] h-[260px] object-cover rounded-[15px]"
               width={2740}
               height={2740}
               quality={75}
