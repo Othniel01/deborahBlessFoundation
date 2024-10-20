@@ -74,7 +74,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient  min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0  "></div>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient  min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0  "></div>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient  min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0  "></div>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient  min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0 "></div>
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient  min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0 "></div>
             </div>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0 "></div>
             </div>
           </div>
         </div>
@@ -284,7 +284,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="w-full h-[10px] z-10 btn-gradient absolute left-0 bottom-0 "></div>
+              <div className="w-full h-[10px] z-10 btn-gradient  min-[997px]:top-auto absolute bottom-auto top-[-90px] left-0 min-[997px]:bottom-0 "></div>
             </div>
           </div>
         </div>
