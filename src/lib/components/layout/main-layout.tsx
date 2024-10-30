@@ -1,49 +1,127 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Button from "../button";
 import { Sling as Hamburger } from "hamburger-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface MainLayoutProps {
   children?: React.ReactNode;
 }
 
-// bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-white/60
-
 function MainLayout({ children }: MainLayoutProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [submenu, setSubmenu] = useState<null | "about" | "donate">(null);
+
+  const handleMenuToggle = () => setMenuOpen(!menuOpen);
+  const handleSubmenuOpen = (menu: "about" | "donate") => setSubmenu(menu);
+  const handleBackToMain = () => setSubmenu(null);
+
   return (
     <div className="w-full h-screen">
-      <div className="nav  fixed bg-white  pl-10 pr-10  min-[803px]:pl-32 min-[803px]:pr-32 min-[1095px]:pl-32 min-[1095px]:pr-32  min-[1567px]:pl-20 min-[1567px]:pr-20 flex z-30 flex-row justify-between min-[1095px]:justify-around shadow-[6px_6px_29px_-6px_rgba(0,0,0,0.1)]  items-center  h-[70px] w-full">
-        <div className="">
-          <h1>Deborah</h1>
+      {/* Nav Bar */}
+      <div className="nav fixed bg-white pl-10 pr-10 flex z-50 flex-row justify-between shadow-md items-center h-[70px] w-full">
+        <div className="flex gap-2 items-center">
+          <Image
+            alt="db-logo"
+            className="w-[34px]"
+            src="/image/db-logo.png"
+            width={1700}
+            height={1700}
+          />
+          <p className="text-[13px] leading-[1.2]">
+            The Deborah <br /> Bless Foundation
+          </p>
         </div>
-        <div className="text-sm hidden min-[1095px]:flex flex-row items-center gap-8">
-          <Link href="/">
-            <p>Home</p>
-          </Link>
-          <Link href="/about">
-            <p>About us</p>
-          </Link>
-          <p>Our Impact</p>
-          <p>Donate</p>
-          <p>Partner with us</p>
-          <p>Blog</p>
+        <div className="hidden min-[1095px]:flex flex-row items-center gap-4">
+          {/* Links for larger screens */}
+          <Link href="/">Home</Link>
+          <Link href="/about">About us</Link>
+          <Link href="/impact">Our Impact</Link>
+          <Link href="/donate">Donate</Link>
+          <Link href="/blog">Blog</Link>
         </div>
-        <div className="">
-          <div className="min-[1095px]:hidden block">
-            <Hamburger size={28} direction="right" />
+
+        <div className="min-[1095px]:hidden  bg-white block">
+          <Hamburger toggled={menuOpen} toggle={handleMenuToggle} size={28} />
+        </div>
+
+        <Button className="btn-gradient hidden min-[1095px]:block">
+          Contact us
+        </Button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      {menuOpen && (
+        <div className="fixed top-0 left-0 w-full h-full bg-white  flex flex-col z-40">
+          {/* Main Menu */}
+          <div
+            className={`flex flex-col items-center justify-center text-black w-full h-full transition-transform duration-300 ${
+              submenu ? "-translate-x-full" : "translate-x-0"
+            }`}
+          >
+            <Link href="/" onClick={handleMenuToggle}>
+              <p className="text-xl mb-4">Home</p>
+            </Link>
+            <p
+              onClick={() => handleSubmenuOpen("about")}
+              className="text-xl mb-4 cursor-pointer"
+            >
+              About Us
+            </p>
+            <Link href="/impact" onClick={handleMenuToggle}>
+              <p className="text-xl mb-4">Our Impact</p>
+            </Link>
+            <p
+              onClick={() => handleSubmenuOpen("donate")}
+              className="text-xl mb-4 cursor-pointer"
+            >
+              Donate
+            </p>
+            <Link href="/blog" onClick={handleMenuToggle}>
+              <p className="text-xl">Blog</p>
+            </Link>
           </div>
 
-          <Button
-            className="btn-gradient hidden 
-          min-[1095px]:block "
-          >
-            Contact us
-          </Button>
+          {/* Submenu for About Us */}
+          {submenu === "about" && (
+            <div className="absolute top-0 left-0 w-full h-full bg-white  flex flex-col items-center justify-center text-black transition-transform duration-300">
+              <button
+                onClick={handleBackToMain}
+                className="absolute top-[6rem] left-[2rem] text-2xl"
+              >
+                ←
+              </button>
+              <Link href="/about" onClick={handleMenuToggle}>
+                <p className="text-xl mb-4">About Us</p>
+              </Link>
+              <Link href="/about/team" onClick={handleMenuToggle}>
+                <p className="text-xl">Team</p>
+              </Link>
+            </div>
+          )}
+
+          {/* Submenu for Donate */}
+          {submenu === "donate" && (
+            <div className="absolute top-0 left-0 w-full h-full bg-white flex flex-col items-center justify-center text-black transition-transform duration-300">
+              <button
+                onClick={handleBackToMain}
+                className="absolute top-[6rem] left-[2rem] text-2xl"
+              >
+                ←
+              </button>
+              <Link href="/donate" onClick={handleMenuToggle}>
+                <p className="text-xl mb-4">Donate</p>
+              </Link>
+              <Link href="/partner" onClick={handleMenuToggle}>
+                <p className="text-xl">Partner</p>
+              </Link>
+            </div>
+          )}
         </div>
-      </div>
-      <div className="h-[100px]"></div>
+      )}
+      <div className="h-[70px]"></div>
       {children}
 
       <div
@@ -81,8 +159,13 @@ function MainLayout({ children }: MainLayoutProps) {
             >
               <div className=" flex w-[99px] flex-col gap-4 text-white">
                 <h1 className="text-lg font-semibold">Short Links</h1>
-                <h1 className="text-base font-normal">About us</h1>
-                <h1 className="text-base  font-normal">Donate</h1>
+                <Link href="/about">
+                  <h1 className="text-base font-normal">About us</h1>
+                </Link>
+                <Link href="/impact">
+                  <h1 className="text-base  font-normal">Impact</h1>
+                </Link>
+
                 <h1 className="text-base font-normal">Latest News</h1>
               </div>
 

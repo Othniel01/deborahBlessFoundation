@@ -46,7 +46,7 @@ export default function Home() {
             </div>
           </div>
           <ImageCarousel />
-          <div className="bg-white  mx-auto my-0 inset-x-0 rounded-[51%_49%_50%_50%_/_56%_56%_44%_44%] w-full absolute h-[120px] bottom-[-61px]"></div>
+          <div className="bg-white hidden min-[582px]:block  mx-auto my-0 inset-x-0 rounded-[51%_49%_50%_50%_/_56%_56%_44%_44%] w-full absolute h-[120px]  bottom-[-61px] "></div>
           {/* <div className="bottom-[-230px] overflow-hidden bg-clip-content   w-full absolute">
             <div className=" translate-x-[-290px]  bg-white w-[2500px]  h-[290px] rounded-[51%_49%_50%_50%_/_56%_56%_44%_44%]"></div>
           </div> */}
@@ -54,13 +54,17 @@ export default function Home() {
 
         <div className=" mt-[4rem]  min-[1055px]:mt-[11rem] 3xl:pr-[17rem] 3xl:pl-[17rem] min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] relative w-full ">
           <object
-            className="w-[44px] absolute left-[70px]"
+            className="min-[582px]:w-[44px] w-[38px] z-0 opacity-50 absolute min-[694px]:left-[70px] top-[-48px]  min-[582px]:top-[-60px] min-[694px]:top-0 left-[20px]"
             type="image/svg+xml"
             data={"/svg/dash-sketch.svg"}
           ></object>
           <FirstSection />
           <object
-            className="w-[44px] absolute top-[80px] right-[70px]"
+            className="w-[44px] z-0 opacity-50 absolute  min-[1332px]:top-[80px] 
+            
+            min-[694px]:top-[590px]
+            
+            top-[420px] right-[20px] min-[694px]:right-[70px]"
             type="image/svg+xml"
             data={"/svg/thin-dash-sketch.svg"}
           ></object>
@@ -68,18 +72,18 @@ export default function Home() {
 
         <div className=" w-full pt-[12rem] 3xl:pr-[17rem] 3xl:pl-[17rem] relative  min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] mt-[10rem] min-[1055px]:mt-[14rem] bg-[#ef52520d] h-fit pb-16">
           <object
-            className="w-[44px] absolute bottom-[130px] left-[70px]"
+            className="w-[44px] opacity-50 z-0 absolute bottom-[30px] min-[1332px]:bottom-[130px] left-[70px]"
             type="image/svg+xml"
             data={"/svg/dash-sketch.svg"}
           ></object>
           <SectionTwo />
           <object
-            className="w-[154px] absolute bottom-[240px] right-[40px] z-0"
+            className="w-[154px] opacity-68 absolute bottom-[240px] right-[40px] z-10"
             type="image/svg+xml"
             data={"/svg/flower-sketch.svg"}
           ></object>
           <object
-            className="w-[94px] absolute top-[110px] right-[70px]"
+            className="w-[94px] absolute min-[1018px]:top-[110px] top-[18px] right-[70px]"
             type="image/svg+xml"
             data={"/svg/sun-sketch.svg"}
           ></object>
@@ -92,7 +96,7 @@ export default function Home() {
         <div
           className=" w-full   3xl:pr-[18rem] 3xl:pl-[18rem]   min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] 
           mt-[5rem] 
-        min-[507px]:mt-[8rem] [1055px]:mt-[10rem]  h-fit pb-16"
+        min-[507px]:mt-[8rem] min-[1055px]:mt-[10rem]  h-fit pb-16"
         >
           <SectionFour />
         </div>
@@ -100,3 +104,7 @@ export default function Home() {
     </div>
   );
 }
+
+// w-full  3xl:pr-[24rem] 3xl:pl-[24rem]   min-[1593px]:pl-[18rem] min-[1593px]:pr-[18rem] min-[1481px]:pl-[14rem] min-[1481px]:pr-[14rem] min-[1293px]:pl-[8rem] min-[1293px]:pr-[8rem] min-[1149px]:pr-[4rem] min-[1149px]:pl-[4rem] pl-[2rem] pr-[2rem]
+//           mt-[5rem]
+//         min-[507px]:mt-[8rem] [1055px]:mt-[10rem]  h-fit pb-16
