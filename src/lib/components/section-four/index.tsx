@@ -9,14 +9,20 @@ export default function SectionFour() {
         <p className="text-sm text-[#F25353] font-semibold">Our Blog</p>
         <h1 className="text-3xl leading-[1.2] mt-2 ">Read Our Latest News</h1>
       </div>
-      <div className="flex min-[1061px]:flex-row flex-col min-[1061px]:gap-0 gap-32 items-center justify-between mt-20 sm:mt-28">
-        <div className=" min-[1061px]:w-[323px] w-full">
+      <div className="flex min-[1061px]:flex-row flex-col min-[1061px]:gap-0 gap-32 items-center justify-between  mt-20 sm:mt-28">
+        <div
+          className=" min-[1821px]:w-[403px]  
+        min-[1621px]:w-[380px] min-[1373px]:w-[360px]
+        min-[1061px]:w-[330px] w-full
+        
+        "
+        >
           <Image
             src={"/image/image-six.png"}
             alt="Cover Image"
             className="object-cover filter grayscale 
-            min-[1061px]:w-[323px] w-full 
-            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[15px]"
+            min-[1061px]:w-[403px] w-full 
+            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[0px]"
             width={2740}
             height={2740}
             quality={75}
@@ -38,12 +44,16 @@ export default function SectionFour() {
             ></object>
           </p>
         </div>
-        <div className="min-[1061px]:w-[323px] w-full">
+        <div
+          className=" min-[1821px]:w-[403px]  
+        min-[1621px]:w-[380px] min-[1373px]:w-[360px]
+        min-[1061px]:w-[330px] w-full"
+        >
           <Image
             src={"/image/image-six.png"}
             alt="Cover Image"
-            className="object-cover filter grayscale min-[1061px]:w-[323px] w-full 
-            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[15px]"
+            className="object-cover filter grayscale min-[1061px]:w-[403px] w-full 
+            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[0px]"
             width={2740}
             height={2740}
             quality={75}
@@ -65,12 +75,16 @@ export default function SectionFour() {
             ></object>
           </p>
         </div>
-        <div className="min-[1061px]:w-[323px] w-full">
+        <div
+          className=" min-[1821px]:w-[403px]  
+        min-[1621px]:w-[380px] min-[1373px]:w-[360px]
+        min-[1061px]:w-[330px] w-full"
+        >
           <Image
             src={"/image/image-six.png"}
             alt="Cover Image"
-            className="object-cover filter grayscale min-[1061px]:w-[323px] w-full 
-            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[15px]"
+            className="object-cover filter grayscale min-[1061px]:w-[403px] w-full 
+            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[0px]"
             width={2740}
             height={2740}
             quality={75}

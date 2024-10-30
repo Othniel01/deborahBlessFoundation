@@ -50,33 +50,14 @@ export default function FirstSection() {
             ></object>
           </p>
         </div>
-        <div className="">
-          <object
-            className="w-[51px]"
-            type="image/svg+xml"
-            data={"/svg/food.svg"}
-          ></object>
-          <h1 className="mt-[15px] font-semibold text-lg">Vocational Skills</h1>
-          <p className="text-sm text-[#666666] mt-[15px]  min-[546px]:w-[220px] w-full">
-            We believe every child should have a chance at a good life, good
-            food and
-          </p>
-          <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-            Learn More
-            <object
-              className="w-[24px]"
-              type="image/svg+xml"
-              data={"/svg/arrow.svg"}
-            ></object>
-          </p>
-        </div>
+
         <div className="">
           <object
             className="w-[51px]"
             type="image/svg+xml"
             data={"/svg/income.svg"}
           ></object>
-          <h1 className="mt-[15px] font-semibold text-lg">Vocational Skills</h1>
+          <h1 className="mt-[15px] font-semibold text-lg">Income Generation</h1>
           <p className="text-sm text-[#666666] mt-[15px] min-[546px]:w-[220px] w-full">
             We believe every child should have a chance at a good life, good
             food and
@@ -90,13 +71,39 @@ export default function FirstSection() {
             ></object>
           </p>
         </div>
+
+        <div className="">
+          <object
+            className="w-[51px]"
+            type="image/svg+xml"
+            data={"/svg/food.svg"}
+          ></object>
+          <h1 className="mt-[15px] font-semibold text-lg">
+            Combating Infant <br></br> Mortality & Malnutrition
+          </h1>
+          <p className="text-sm text-[#666666] mt-[15px]  min-[546px]:w-[220px] w-full">
+            We believe every child should have a chance at a good life, good
+            food and
+          </p>
+          <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
+            Learn More
+            <object
+              className="w-[24px]"
+              type="image/svg+xml"
+              data={"/svg/arrow.svg"}
+            ></object>
+          </p>
+        </div>
+
         <div className="">
           <object
             className="w-[51px]"
             type="image/svg+xml"
             data={"/svg/church.svg"}
           ></object>
-          <h1 className="mt-[15px] font-semibold text-lg">Vocational Skills</h1>
+          <h1 className="mt-[15px] font-semibold text-lg">
+            Gospel <br></br> Outreach & Evangelism
+          </h1>
           <p className="text-sm text-[#666666] mt-[15px] min-[546px]:w-[220px] w-full">
             We believe every child should have a chance at a good life, good
             food and

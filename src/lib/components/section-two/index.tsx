@@ -5,7 +5,7 @@ export default function SectionTwo() {
   return (
     <div className="">
       <div
-        className="flex flex-col min-[1018px]:flex-row min-[1018px]:gap-0 
+        className="flex flex-col  min-[1018px]:flex-row min-[1018px]:gap-0 
       min-[722px]:gap-[180px] gap-[310px]  items-center justify-between"
       >
         <div className="">
@@ -52,7 +52,7 @@ export default function SectionTwo() {
       </div>
 
       <div
-        className="flex  flex-col min-[1018px]:flex-row  min-[1018px]:gap-0 min-[722px]:gap-[250px] gap-[310px] min-[1018px]:mt-[20rem] 
+        className="flex  flex-col min-[1018px]:flex-row  min-[1018px]:gap-0 min-[722px]:gap-[250px] relative z-10 gap-[310px] min-[1018px]:mt-[20rem] 
       mt-[7rem]
       sm:mt-[12rem] items-center justify-between"
       >
