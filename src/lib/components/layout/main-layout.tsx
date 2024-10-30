@@ -21,7 +21,7 @@ function MainLayout({ children }: MainLayoutProps) {
   return (
     <div className="w-full h-screen">
       {/* Nav Bar */}
-      <div className="nav fixed bg-white pl-10 pr-10 flex z-50 flex-row justify-between shadow-md items-center h-[70px] w-full">
+      <div className="nav fixed bg-white 3xl:pr-[18rem] 3xl:pl-[18rem]   min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] flex z-50 flex-row justify-between shadow-md items-center h-[70px] w-full">
         <div className="flex gap-2 items-center">
           <Image
             alt="db-logo"
