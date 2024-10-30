@@ -36,11 +36,31 @@ function MainLayout({ children }: MainLayoutProps) {
         </div>
         <div className="hidden min-[1095px]:flex flex-row items-center gap-4">
           {/* Links for larger screens */}
-          <Link href="/">Home</Link>
-          <Link href="/about">About us</Link>
-          <Link href="/impact">Our Impact</Link>
-          <Link href="/donate">Donate</Link>
-          <Link href="/blog">Blog</Link>
+          <div className="w-[100px] text-sm flex justify-center">
+            <Link href="/">Home</Link>
+          </div>
+          <div className="w-[100px] text-sm ">
+            <div className="relative flex justify-center w-full main-link">
+              <Link href="/about">About us</Link>
+              <div className="absolute flex justify-center items-end pb-2 bg-white h-[45px] w-full sub-link top-[20px]">
+                <Link href="/about">Team</Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-[100px] text-sm flex justify-center">
+            <Link href="/impact">Our Impact</Link>
+          </div>
+          <div className="w-[100px] text-sm ">
+            <div className="relative flex justify-center w-full main-link">
+              <Link href="/donate">Donate</Link>
+              <div className="absolute flex justify-center items-end pb-2 bg-white h-[45px] w-full sub-link top-[20px]">
+                <Link href="/partner">Partner</Link>
+              </div>
+            </div>
+          </div>
+          <div className="w-[100px] text-sm flex justify-center">
+            <Link href="/blog">Blog</Link>
+          </div>
         </div>
 
         <div className="min-[1095px]:hidden  bg-white block">
