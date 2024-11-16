@@ -10,23 +10,29 @@ export default function SectionTwo() {
       >
         <div className="">
           <div className=" rounded-[19px] relative w-[317px] h-[356px] border-dashed border-2 border-[#F25353]">
-            <Image
-              src={"/image/image-four.png"}
-              alt="Cover Image"
-              className=" filter grayscale absolute top-[-140px] min-[722px]:top-[-90px] right-[29px] min-[722px]:right-[-190px] w-[251px] h-[350px] object-cover rounded-[15px]"
-              width={2740}
-              height={2740}
-              quality={75}
-            />
-            <Image
-              src={"/image/image-two.png"}
-              alt="Cover Image"
-              className=" filter grayscale absolute min-[722px]:bottom-[-90px] bottom-[-230px] left-[31px] 
-              min-[722px]:left-[-20px] w-[251px] h-[350px] object-cover rounded-[15px]"
-              width={2740}
-              height={2740}
-              quality={75}
-            />
+            <div className="top-[-140px] min-[722px]:top-[-90px] right-[29px] min-[722px]:right-[-190px] bg-white p-2 w-[251px] absolute shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)]  h-[350px]">
+              <Image
+                src={"/image/image-four.png"}
+                alt="Cover Image"
+                className=" filter  object-cover h-full w-full"
+                width={2740}
+                height={2740}
+                quality={75}
+              />
+            </div>
+            <div
+              className="absolute bg-white p-2 min-[722px]:bottom-[-90px] bottom-[-230px] left-[31px] 
+              min-[722px]:left-[-20px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] w-[251px] h-[350px]  "
+            >
+              <Image
+                src={"/image/image-two.png"}
+                alt="Cover Image"
+                className=" filter  object-cover w-full h-full "
+                width={2740}
+                height={2740}
+                quality={75}
+              />
+            </div>
           </div>
         </div>
         <div className="">
@@ -41,9 +47,10 @@ export default function SectionTwo() {
             className="mt-[30px] text-[#666666] w-full 
           min-[491px]:w-[370px] min-[1132px]:w-[450px]"
           >
-            We believe every child should have a chance at a good life, good
-            food and overall a great future that is why we try everything in our
-            power to provide, nurture and cater for each child.
+            We believe every child deserves the right to nutritious food, access
+            to education, and the opportunity to take control of their own
+            destiny. This vision fuels everything we do, from our outreach
+            programs to our on-the-ground initiatives.
           </p>
           <Button className="mt-10 w-[142px] h-[49px] btn-gradient">
             Learn More
@@ -86,23 +93,30 @@ export default function SectionTwo() {
 
         <div className="">
           <div className=" rounded-[19px] relative w-[317px] h-[356px] ">
-            <Image
-              src={"/image/image-five.png"}
-              alt="Cover Image"
-              className="filter grayscale absolute 
-              min-[722px]:top-[-120px] top-[-230px] left-[1px] z-20 min-[722px]:left-[-200px] w-[295px] h-[410px] object-cover rounded-[15px]"
-              width={2740}
-              height={2740}
-              quality={75}
-            />
-            <Image
-              src={"/image/image-two.png"}
-              alt="Cover Image"
-              className=" filter grayscale absolute bottom-[-5px] z-10 left-[20px] w-[263px] h-[260px] object-cover rounded-[15px]"
-              width={2740}
-              height={2740}
-              quality={75}
-            />
+            <div
+              className="absolute 
+              min-[722px]:top-[-120px] bg-white p-2 top-[-230px] left-[1px] z-20 min-[722px]:left-[-200px] w-[295px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] h-[410px]"
+            >
+              <Image
+                src={"/image/image-five.png"}
+                alt="Cover Image"
+                className="filter  h-full w-full  object-cover "
+                width={2740}
+                height={2740}
+                quality={75}
+              />
+            </div>
+
+            <div className="absolute bottom-[-5px] z-10 left-[20px] w-[263px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white p-2 h-[260px]">
+              <Image
+                src={"/image/image-two.png"}
+                alt="Cover Image"
+                className=" filter   object-cover h-full w-full"
+                width={2740}
+                height={2740}
+                quality={75}
+              />
+            </div>
           </div>
         </div>
       </div>

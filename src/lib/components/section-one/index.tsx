@@ -16,9 +16,11 @@ export default function FirstSection() {
        min-[1135px]:w-[550px] w-full min-[474px]:w-[360px]
         "
         >
-          We believe every child should have a chance at a good life, good food
-          and overall a great future that is why we try everything in our power
-          to provide, nurture and cater for each child.
+          Our mission is to provide, nurture, and cater to those in need,
+          ensuring that every child has the chance to thrive. Whether it’s
+          reducing infant mortality, supporting vocational training, or
+          spreading the message of Jesus Christ and His love, our programs aim
+          to inspire change that lasts
         </p>
         <Button className="mt-10 w-[142px] h-[49px] btn-gradient">
           Donate Now
@@ -38,8 +40,8 @@ export default function FirstSection() {
           ></object>
           <h1 className="mt-[15px] font-semibold text-lg">Vocational Skills</h1>
           <p className="text-sm text-[#666666] mt-[15px] min-[546px]:w-[220px] w-full">
-            We believe every child should have a chance at a good life, good
-            food and
+            We believe that skills lead to empowerment. With a focus on
+            vocation...
           </p>
           <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
             Learn More
@@ -59,8 +61,8 @@ export default function FirstSection() {
           ></object>
           <h1 className="mt-[15px] font-semibold text-lg">Income Generation</h1>
           <p className="text-sm text-[#666666] mt-[15px] min-[546px]:w-[220px] w-full">
-            We believe every child should have a chance at a good life, good
-            food and
+            We aim to break the cycle of poverty by providing individuals with
+            income...
           </p>
           <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
             Learn More
@@ -82,8 +84,8 @@ export default function FirstSection() {
             Combating Infant <br></br> Mortality & Malnutrition
           </h1>
           <p className="text-sm text-[#666666] mt-[15px]  min-[546px]:w-[220px] w-full">
-            We believe every child should have a chance at a good life, good
-            food and
+            We recognize that the first years of life are crucial for a
+            child’s...
           </p>
           <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
             Learn More
@@ -105,8 +107,8 @@ export default function FirstSection() {
             Gospel <br></br> Outreach & Evangelism
           </h1>
           <p className="text-sm text-[#666666] mt-[15px] min-[546px]:w-[220px] w-full">
-            We believe every child should have a chance at a good life, good
-            food and
+            Sharing hope and faith is a vital part of our mission. Through
+            Gospel...
           </p>
           <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
             Learn More

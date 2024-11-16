@@ -1,115 +1,131 @@
-import Button from "@/lib/components/button";
+"use client";
 
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import Image from "next/image";
+import { ref, get, query, limitToLast } from "firebase/database";
+import { db } from "@/lib/components/firebase-config";
+
+interface Blog {
+  id: string;
+  title: string;
+  date: string;
+  imageURL: string;
+  content: { html: string }; // Update content to hold HTML
+}
 
 export default function SectionFour() {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true); // Add loading state
+
+  useEffect(() => {
+    const fetchRecentBlogs = async () => {
+      try {
+        const blogsRef = ref(db, "blogs");
+        const blogsQuery = query(blogsRef, limitToLast(3)); // Fetch last three blogs
+        const snapshot = await get(blogsQuery);
+
+        if (snapshot.exists()) {
+          const data = snapshot.val();
+          const blogArray = Object.keys(data)
+            .map((key) => ({
+              id: key,
+              title: data[key].title,
+              date: data[key].date,
+              imageURL: data[key].imageURL,
+              content: {
+                html: String(data[key].content.html), // Ensure HTML content is a string
+              },
+            }))
+            .reverse(); // Newest blogs first
+
+          setBlogs(blogArray);
+        } else {
+          console.log("No blogs found");
+        }
+      } catch (error) {
+        console.error("Error fetching blogs: ", error);
+      } finally {
+        setLoading(false); // Stop loading once data is fetched
+      }
+    };
+
+    fetchRecentBlogs();
+  }, []);
+
+  // Function to get preview text from HTML
+  const getPreviewContent = (htmlContent: string, charLimit: number) => {
+    const textContent = htmlContent.replace(/<[^>]+>/g, ""); // Strip HTML tags
+    const trimmedContent = textContent.slice(0, charLimit);
+    return trimmedContent.length < textContent.length
+      ? trimmedContent + "..."
+      : trimmedContent;
+  };
+
+  // Skeleton Loader
+  const renderSkeletons = () =>
+    Array.from({ length: 3 }).map((_, index) => (
+      <div
+        key={index}
+        className="animate-pulse min-[1821px]:w-[403px] min-[1621px]:w-[380px] min-[1373px]:w-[360px] min-[1061px]:w-[330px] w-full"
+      >
+        <div className="w-full h-[220px] sm:h-[270px] bg-gray-200 rounded-md" />
+        <div className="mt-8 h-4 w-1/2 bg-gray-200 rounded" />
+        <div className="mt-2 h-4 w-3/4 bg-gray-200 rounded" />
+        <div className="mt-5 h-4 w-full bg-gray-200 rounded" />
+        <div className="mt-1 h-4 w-5/6 bg-gray-200 rounded" />
+        <div className="mt-5 h-4 w-1/4 bg-gray-200 rounded" />
+      </div>
+    ));
+
   return (
     <div className="flex flex-col">
       <div className="text-center">
         <p className="text-sm text-[#F25353] font-semibold">Our Blog</p>
-        <h1 className="text-3xl leading-[1.2] mt-2 ">Read Our Latest News</h1>
+        <h1 className="text-3xl leading-[1.2] mt-2">Read Our Latest News</h1>
       </div>
-      <div className="flex min-[1061px]:flex-row flex-col min-[1061px]:gap-0 gap-32 items-center justify-between  mt-20 sm:mt-28">
-        <div
-          className=" min-[1821px]:w-[403px]  
-        min-[1621px]:w-[380px] min-[1373px]:w-[360px]
-        min-[1061px]:w-[330px] w-full
-        
-        "
-        >
-          <Image
-            src={"/image/image-six.png"}
-            alt="Cover Image"
-            className="object-cover filter grayscale 
-            min-[1061px]:w-[403px] w-full 
-            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[0px]"
-            width={2740}
-            height={2740}
-            quality={75}
-          />
-          <p className="mt-8 text-sm">February 31, 2022</p>
-          <h1 className=" mt-2 text-2xl w-full">The Ashley Mutengo Story</h1>
+      <div className="flex min-[1061px]:flex-row flex-col min-[1061px]:gap-0 gap-32 items-center justify-between mt-20 sm:mt-28">
+        {loading
+          ? renderSkeletons() // Show skeleton loaders when loading
+          : blogs.map((blog) => (
+              <div
+                key={blog.id}
+                className="min-[1821px]:w-[403px] min-[1621px]:w-[380px] min-[1373px]:w-[360px] min-[1061px]:w-[330px] w-full"
+              >
+                <div className="min-[1061px]:w-[403px] w-full min-[1061px]:h-[189px] bg-white p-2 h-[320px] sm:h-[470px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] rounded-t-[0px]">
+                  <Image
+                    src={blog.imageURL}
+                    alt="Cover Image"
+                    className="object-cover w-full h-full filter"
+                    width={2740}
+                    height={2740}
+                    quality={75}
+                  />
+                </div>
+                <p className="mt-8 text-sm">{blog.date}</p>
+                <h1 className="mt-2 text-2xl w-full">{blog.title}</h1>
 
-          <p className="mt-5 text-[#666666]">
-            We believe every child should have a chance at a good life, good
-            food and overall a great future tha
-          </p>
+                {/* Render limited HTML content */}
+                <div
+                  className="mt-5 text-[#666666]"
+                  dangerouslySetInnerHTML={{
+                    __html: getPreviewContent(blog.content.html, 100),
+                  }}
+                ></div>
 
-          <p className="mt-5 gap-3 flex items-center text-[#F25353]">
-            Learn More
-            <object
-              className="w-[24px]"
-              type="image/svg+xml"
-              data={"/svg/arrow.svg"}
-            ></object>
-          </p>
-        </div>
-        <div
-          className=" min-[1821px]:w-[403px]  
-        min-[1621px]:w-[380px] min-[1373px]:w-[360px]
-        min-[1061px]:w-[330px] w-full"
-        >
-          <Image
-            src={"/image/image-six.png"}
-            alt="Cover Image"
-            className="object-cover filter grayscale min-[1061px]:w-[403px] w-full 
-            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[0px]"
-            width={2740}
-            height={2740}
-            quality={75}
-          />
-          <p className="mt-8 text-sm">February 31, 2022</p>
-          <h1 className=" mt-2 text-2xl w-full">The Ashley Mutengo Story</h1>
-
-          <p className="mt-5 text-[#666666]">
-            We believe every child should have a chance at a good life, good
-            food and overall a great future tha
-          </p>
-
-          <p className="mt-5 gap-3 flex items-center text-[#F25353]">
-            Learn More
-            <object
-              className="w-[24px]"
-              type="image/svg+xml"
-              data={"/svg/arrow.svg"}
-            ></object>
-          </p>
-        </div>
-        <div
-          className=" min-[1821px]:w-[403px]  
-        min-[1621px]:w-[380px] min-[1373px]:w-[360px]
-        min-[1061px]:w-[330px] w-full"
-        >
-          <Image
-            src={"/image/image-six.png"}
-            alt="Cover Image"
-            className="object-cover filter grayscale min-[1061px]:w-[403px] w-full 
-            min-[1061px]:h-[189px] h-[320px] sm:h-[470px] rounded-t-[0px]"
-            width={2740}
-            height={2740}
-            quality={75}
-          />
-          <p className="mt-8 text-sm">February 31, 2022</p>
-          <h1 className=" mt-2 text-2xl w-full">The Ashley Mutengo Story</h1>
-
-          <p className="mt-5 text-[#666666]">
-            We believe every child should have a chance at a good life, good
-            food and overall a great future tha
-          </p>
-
-          <p className="mt-5 gap-3 flex items-center text-[#F25353]">
-            Learn More
-            <object
-              className="w-[24px]"
-              type="image/svg+xml"
-              data={"/svg/arrow.svg"}
-            ></object>
-          </p>
-        </div>
+                <Link href={`/blog/${blog.id}`}>
+                  <p className="mt-5 cursor-pointer gap-3 flex items-center text-[#F25353]">
+                    Learn More
+                    <object
+                      className="w-[24px]"
+                      type="image/svg+xml"
+                      data={"/svg/arrow.svg"}
+                    ></object>
+                  </p>
+                </Link>
+              </div>
+            ))}
       </div>
-      <Button className=" self-center mt-28 w-[142px] h-[49px] btn-gradient">
-        See More
-      </Button>
     </div>
   );
 }
