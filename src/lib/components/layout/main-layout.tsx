@@ -43,7 +43,7 @@ function MainLayout({ children }: MainLayoutProps) {
             <div className="relative flex justify-center w-full main-link">
               <Link href="/about">About us</Link>
               <div className="absolute flex justify-center items-end pb-2 bg-white h-[45px] w-full sub-link top-[20px]">
-                <Link href="/about">Team</Link>
+                <Link href="/team">Team</Link>
               </div>
             </div>
           </div>
@@ -116,7 +116,7 @@ function MainLayout({ children }: MainLayoutProps) {
               <Link href="/about" onClick={handleMenuToggle}>
                 <p className="text-xl mb-4">About Us</p>
               </Link>
-              <Link href="/about/team" onClick={handleMenuToggle}>
+              <Link href="/team" onClick={handleMenuToggle}>
                 <p className="text-xl">Team</p>
               </Link>
             </div>
@@ -146,7 +146,7 @@ function MainLayout({ children }: MainLayoutProps) {
 
       <div
         className="w-full relative flex flex-col 
-         min-[870px]:h-[500px] sm:h-[700px] h-[980px]  min-[507px]:mt-40 mt-20 bg-[#131313]"
+         min-[870px]:h-[500px] sm:h-[700px] h-[980px]  min-[507px]:mt-10 mt-10 bg-[#131313]"
       >
         <div className=" w-full pt-[6rem]   3xl:pr-[18rem] 3xl:pl-[18rem]   min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem]  h-fit pb-16">
           <div

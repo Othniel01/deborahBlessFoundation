@@ -17,7 +17,7 @@ export default function SectionThree() {
           <Image
             src={"/image/image-six.png"}
             alt="Cover Image"
-            className="object-cover w-full h-full filter grayscale  
+            className="object-cover w-full h-full filter 
           rounded-t-[0px]"
             width={2740}
             height={2740}
@@ -94,7 +94,7 @@ export default function SectionThree() {
         <Image
           src={"/image/image-five.png"}
           alt="Cover Image"
-          className=" filter absolute grayscale  w-full h-full object-cover rounded-[0px]"
+          className=" filter absolute   w-full h-full object-cover rounded-[0px]"
           width={2740}
           height={2740}
           quality={75}
