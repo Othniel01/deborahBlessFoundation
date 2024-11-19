@@ -1,5 +1,6 @@
 import { MainLayout } from "@/lib/components/layout";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Team() {
   return (
@@ -62,11 +63,15 @@ export default function Team() {
                   President & Chief Executive Officer, The DB Foundation
                 </p>
                 <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  The Deborah Bless Foundation was established to carry out
-                  programs, events and conferences aimed at spreading the gospel
-                  of Jesus christ WORLDWIDE The Deborah Bless Foundation was
-                  established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ .
+                  Deborah Ogwuche is a business leader and software engineer who
+                  graduated from ALX-Holberton School in Silicon Valley, USA.
+                  She is also a hospitality/nutrition education expert and the
+                  recipient of the Stanford Seed Aspire program for African
+                  Entrepreneurs. As the CEO/ Manager of Abuja Culinary School,
+                  she led the school to having the highest 5-star ratings for
+                  any school in Nigeria and the first school in Nigeria to break
+                  a Guinness World Record in 2024. She is a published author,
+                  speaker, mentor, and technology expert.
                 </p>
               </div>
             </div>
@@ -95,11 +100,12 @@ export default function Team() {
                   Chief Operating Officer, The DB Foundation
                 </p>
                 <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  The Deborah Bless Foundation was established to carry out
-                  programs, events and conferences aimed at spreading the gospel
-                  of Jesus christ WORLDWIDE The Deborah Bless Foundation was
-                  established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ .
+                  James Ughe has over a decade of experience in the education
+                  sector and is the Administrative Officer at Abuja Culinary
+                  School. Renowned for his expertise in project execution,
+                  organization, and data management, James combines passion,
+                  resilience, and a strong work ethic to drive
+                  excellence in his role.
                 </p>
               </div>
             </div>
@@ -126,11 +132,15 @@ export default function Team() {
                 </h1>
                 <p className="mt-2">Chief Program Officer, The DB Foundation</p>
                 <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  The Deborah Bless Foundation was established to carry out
-                  programs, events and conferences aimed at spreading the gospel
-                  of Jesus christ WORLDWIDE The Deborah Bless Foundation was
-                  established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ .
+                  Mariam Adeiza is a skilled administrator with 5 years of
+                  experience as a Program Assistant. A proficient data analyst,
+                  she has worked with Prohealth International and the UN World
+                  Food Program. She also served as an Administrative Assistant
+                  for EU-SUFEGOR at B&S Europe and as Secretary to the Deputy
+                  Director at the Archives and History Bureau. Renowned for her
+                  excellence in management, business communication, and office
+                  planning, Mariam excels in building strong relationships
+                  with diverse people.
                 </p>
               </div>
             </div>
@@ -163,14 +173,21 @@ export default function Team() {
                     Get Involved
                   </h1>
 
-                  <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                    Learn More
-                    <object
-                      className="w-[24px]"
-                      type="image/svg+xml"
-                      data={"/svg/arrow.svg"}
-                    ></object>
-                  </p>
+                  <Link className="group  relative" href="">
+                    <p className="mt-[15px] flex items-center text-[#F25353]">
+                      <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                      <object
+                        className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                        type="image/svg+xml"
+                        data={"/svg/arrow.svg"}
+                      ></object>
+                      <span className="group-hover:ml-[1rem] block">
+                        {" "}
+                        Learn More
+                      </span>
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="">
@@ -183,14 +200,21 @@ export default function Team() {
                     Support DBF
                   </h1>
 
-                  <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                    Learn More
-                    <object
-                      className="w-[24px]"
-                      type="image/svg+xml"
-                      data={"/svg/arrow.svg"}
-                    ></object>
-                  </p>
+                  <Link className="group  relative" href="">
+                    <p className="mt-[15px] flex items-center text-[#F25353]">
+                      <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                      <object
+                        className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                        type="image/svg+xml"
+                        data={"/svg/arrow.svg"}
+                      ></object>
+                      <span className="group-hover:ml-[1rem] block">
+                        {" "}
+                        Learn More
+                      </span>
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="">
@@ -203,14 +227,21 @@ export default function Team() {
                     Buy A Plate
                   </h1>
 
-                  <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                    Learn More
-                    <object
-                      className="w-[24px]"
-                      type="image/svg+xml"
-                      data={"/svg/arrow.svg"}
-                    ></object>
-                  </p>
+                  <Link className="group  relative" href="">
+                    <p className="mt-[15px] flex items-center text-[#F25353]">
+                      <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                      <object
+                        className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                        type="image/svg+xml"
+                        data={"/svg/arrow.svg"}
+                      ></object>
+                      <span className="group-hover:ml-[1rem] block">
+                        {" "}
+                        Learn More
+                      </span>
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>

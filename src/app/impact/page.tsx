@@ -4,6 +4,7 @@ import { MainLayout } from "@/lib/components/layout";
 import MakeMap from "@/lib/components/map";
 // import SectionFour from "@/lib/components/section-four";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ImpactPage() {
   return (
@@ -138,14 +139,21 @@ export default function ImpactPage() {
                     Get Involved
                   </h1>
 
-                  <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                    Learn More
-                    <object
-                      className="w-[24px]"
-                      type="image/svg+xml"
-                      data={"/svg/arrow.svg"}
-                    ></object>
-                  </p>
+                  <Link className="group  relative" href="">
+                    <p className="mt-[15px] flex items-center text-[#F25353]">
+                      <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                      <object
+                        className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                        type="image/svg+xml"
+                        data={"/svg/arrow.svg"}
+                      ></object>
+                      <span className="group-hover:ml-[1rem] block">
+                        {" "}
+                        Learn More
+                      </span>
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="">
@@ -158,14 +166,21 @@ export default function ImpactPage() {
                     Support DBF
                   </h1>
 
-                  <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                    Learn More
-                    <object
-                      className="w-[24px]"
-                      type="image/svg+xml"
-                      data={"/svg/arrow.svg"}
-                    ></object>
-                  </p>
+                  <Link className="group  relative" href="">
+                    <p className="mt-[15px] flex items-center text-[#F25353]">
+                      <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                      <object
+                        className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                        type="image/svg+xml"
+                        data={"/svg/arrow.svg"}
+                      ></object>
+                      <span className="group-hover:ml-[1rem] block">
+                        {" "}
+                        Learn More
+                      </span>
+                    </p>
+                  </Link>
                 </div>
 
                 <div className="">
@@ -178,14 +193,21 @@ export default function ImpactPage() {
                     Buy A Plate
                   </h1>
 
-                  <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                    Learn More
-                    <object
-                      className="w-[24px]"
-                      type="image/svg+xml"
-                      data={"/svg/arrow.svg"}
-                    ></object>
-                  </p>
+                  <Link className="group  relative" href="">
+                    <p className="mt-[15px] flex items-center text-[#F25353]">
+                      <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                      <object
+                        className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                        type="image/svg+xml"
+                        data={"/svg/arrow.svg"}
+                      ></object>
+                      <span className="group-hover:ml-[1rem] block">
+                        {" "}
+                        Learn More
+                      </span>
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
