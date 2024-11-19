@@ -25,41 +25,50 @@ function MainLayout({ children }: MainLayoutProps) {
         <div className="flex gap-2 items-center">
           <Image
             alt="db-logo"
-            className="w-[34px]"
+            className="w-[100px]"
             src="/image/db-logo.png"
             width={1700}
             height={1700}
           />
-          <p className="text-[13px] leading-[1.2]">
+          {/* <p className="text-[13px] leading-[1.2]">
             The Deborah <br /> Bless Foundation
-          </p>
+          </p> */}
         </div>
         <div className="hidden min-[1095px]:flex flex-row items-center gap-4">
           {/* Links for larger screens */}
-          <div className="w-[100px] text-sm flex justify-center">
+          <div className="w-[100px] relative group text-sm flex flex-col items-center">
             <Link href="/">Home</Link>
+
+            <hr className="w-full h-1 hidden group-hover:block absolute bottom-[-25px]  bg-red-500" />
           </div>
           <div className="w-[100px] text-sm ">
-            <div className="relative flex justify-center w-full main-link">
+            <div className="relative group flex justify-center w-full main-link">
               <Link href="/about">About us</Link>
               <div className="absolute flex justify-center items-end pb-2 bg-white h-[45px] w-full sub-link top-[20px]">
                 <Link href="/team">Team</Link>
               </div>
+
+              <hr className="w-full h-1 hidden group-hover:block absolute bottom-[-48px]  bg-red-500" />
             </div>
           </div>
-          <div className="w-[100px] text-sm flex justify-center">
+          <div className="w-[100px] relative group text-sm flex justify-center">
             <Link href="/impact">Our Impact</Link>
+            <hr className="w-full h-1 hidden group-hover:block absolute bottom-[-25px]  bg-red-500" />
           </div>
           <div className="w-[100px] text-sm ">
-            <div className="relative flex justify-center w-full main-link">
+            <div className="relative group flex justify-center w-full main-link">
               <Link href="/donate">Donate</Link>
-              <div className="absolute flex justify-center items-end pb-2 bg-white h-[45px] w-full sub-link top-[20px]">
+              {/* <div className="absolute hidden justify-center items-end pb-2 bg-white h-[45px] w-full sub-link top-[20px]">
                 <Link href="/partner">Partner</Link>
-              </div>
+              </div> */}
+
+              <hr className="w-full h-1 hidden group-hover:block absolute bottom-[-25px]  bg-red-500" />
             </div>
           </div>
-          <div className="w-[100px] text-sm flex justify-center">
+          <div className="w-[100px] relative group text-sm flex justify-center">
             <Link href="/blog">Blog</Link>
+
+            <hr className="w-full h-1 hidden group-hover:block absolute bottom-[-25px]  bg-red-500" />
           </div>
         </div>
 
@@ -93,12 +102,9 @@ function MainLayout({ children }: MainLayoutProps) {
             <Link href="/impact" onClick={handleMenuToggle}>
               <p className="text-xl mb-4">Our Impact</p>
             </Link>
-            <p
-              onClick={() => handleSubmenuOpen("donate")}
-              className="text-xl mb-4 cursor-pointer"
-            >
-              Donate
-            </p>
+            <Link href="/donate" onClick={handleMenuToggle}>
+              <p className="text-xl mb-4">Donate</p>
+            </Link>
             <Link href="/blog" onClick={handleMenuToggle}>
               <p className="text-xl">Blog</p>
             </Link>
@@ -157,76 +163,122 @@ function MainLayout({ children }: MainLayoutProps) {
           >
             <div className="text-white">
               <h1
-                className="text-3xl w-[full]
-                min-[982px]:w-[450px]"
+                className="text-2xl font-semibold w-[full]
+                min-[982px]:w-[490px]"
               >
                 The Deborah Bless Foundation
               </h1>
               <p
-                className="mt-4  w-[280px]  
+                className="mt-4 font-normal text-sm  w-[280px]  
                 min-[1066px]:w-[320px] min-[1132px]:w-[450px]"
               >
-                We believe every child should have a chance at a good life, good
-                food and overall a great future tha
+                Since its inception, the Deborah Bless Foundation has been a
+                beacon of hope, empowering individuals and communities across
+                Nigeria.
               </p>
-              <Button className="mt-12 w-[142px] h-[49px] btn-gradient">
-                Donate Now
-              </Button>
+
+              <div className="mt-4 flex gap-4 items-center">
+                <Link href="">
+                  <div className="ring-1 rounded-full p-3 ring-white ">
+                    <object
+                      className="w-[18px] pointer-events-none"
+                      type="image/svg+xml"
+                      data={"/svg/X.svg"}
+                    ></object>
+                  </div>
+                </Link>
+                <Link href="">
+                  <div className="ring-1 rounded-full p-3 ring-white ">
+                    <object
+                      className="w-[18px] pointer-events-none"
+                      type="image/svg+xml"
+                      data={"/svg/instagram.svg"}
+                    ></object>
+                  </div>
+                </Link>
+                <Link href="">
+                  <div className="ring-1 rounded-full p-3 ring-white ">
+                    <object
+                      className="w-[18px] pointer-events-none"
+                      type="image/svg+xml"
+                      data={"/svg/facebook.svg"}
+                    ></object>
+                  </div>
+                </Link>
+                <Link href="">
+                  <div className="ring-1 rounded-full p-3 ring-white ">
+                    <object
+                      className="w-[18px] pointer-events-none"
+                      type="image/svg+xml"
+                      data={"/svg/linkedin.svg"}
+                    ></object>
+                  </div>
+                </Link>
+              </div>
             </div>
             <div
-              className="flex flex-col sm:flex-row gap-20
+              className="flex flex-col w-full 
+              sm:w-auto sm:flex-row gap-20
               min-[1066px]:gap-40"
             >
-              <div className=" flex w-[99px] flex-col gap-4 text-white">
+              <div className=" flex w-[99px] flex-col gap-2 text-white">
                 <h1 className="text-lg font-semibold">Short Links</h1>
+
+                <Link href="/blog">
+                  <h1 className="text-sm  font-normal">Blog</h1>
+                </Link>
                 <Link href="/about">
-                  <h1 className="text-base font-normal">About us</h1>
+                  <h1 className="text-sm font-normal">About</h1>
                 </Link>
                 <Link href="/impact">
-                  <h1 className="text-base  font-normal">Impact</h1>
+                  <h1 className="text-sm  font-normal">Impact</h1>
                 </Link>
-
-                <h1 className="text-base font-normal">Latest News</h1>
+                <Link href="/team">
+                  <h1 className="text-sm  font-normal">Team</h1>
+                </Link>
+                <Link href="/donate">
+                  <h1 className="text-sm  font-normal">Donate</h1>
+                </Link>
               </div>
 
               <div className="flex flex-col gap-2 text-white">
                 <h1 className="text-lg font-semibold">Contact us</h1>
-                <p className="flex font-normal flex-row gap-3">
+                <p className="flex font-normal text-sm flex-row gap-3">
                   <object
                     className="w-[24px]"
                     type="image/svg+xml"
                     data={"/svg/location.svg"}
                   ></object>
-                  1st Avenue, gwarinpa
+                  MIB Plaza No 23, Gwarinpa Nigeria
                 </p>
-                <p className="flex mt-2 font-normal flex-row gap-3">
+                <p className="flex mt-2 text-sm  font-normal flex-row gap-3">
                   <object
                     className="w-[24px]"
                     type="image/svg+xml"
                     data={"/svg/mail.svg"}
                   ></object>
-                  Hello@DeborahBlessFoundation
+                  info@thedb.com
                 </p>
-                <p className="flex mt-2 font-normal flex-row gap-3">
+                <p className="flex mt-2 text-sm  font-normal flex-row gap-3">
                   <object
                     className="w-[24px]"
                     type="image/svg+xml"
                     data={"/svg/phone.svg"}
                   ></object>
-                  +1200 456 897
+                  +234 0000 0000
                 </p>
               </div>
             </div>
           </div>
-          <hr className="h-[1px] left-0 absolute min-[1132px]:mt-28 mt-[6rem] w-full bg-white" />
 
-          <div className="flex 3xl:pr-[18rem] 3xl:pl-[18rem] sm:flex-row flex-col min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] left-0 bottom-5 w-full absolute items-center justify-between">
-            <div className="flex text-xs text-white items-center gap-4">
-              <p>Terms of use</p>|<p>Privacy policy</p>
+          <div className="flex 3xl:pr-[18rem] 3xl:pl-[18rem] sm:flex-row flex-col min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] left-0 bottom-[4rem] w-full absolute items-center justify-between">
+            <div className="w-full bg-[#181818] flex justify-center items-center h-[80px]">
+              <p className="text-white text-xs sm:text-sm">
+                © Copyright{" "}
+                <span className="font-bold">thedeborahblessfoundation</span> All
+                Rights Reserved
+              </p>
             </div>
-            <p className="text-white text-xs">
-              Copyright 2022 Deborah Bless Foundation
-            </p>
           </div>
         </div>
       </div>

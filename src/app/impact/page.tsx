@@ -1,4 +1,5 @@
 // import SectionFour from "@/lib/components/section-four";
+import ImpactStories from "@/lib/components/impact-story";
 import { MainLayout } from "@/lib/components/layout";
 import MakeMap from "@/lib/components/map";
 // import SectionFour from "@/lib/components/section-four";
@@ -27,9 +28,9 @@ export default function ImpactPage() {
               Our Impact
             </h1>
             <p className="text-white w-full min-[674px]:w-[590px] text-[14px]">
-              The Deborah Bless Foundation was established to carry outprograms,
-              events and conferences aimed at spreading the gospel of Jesus
-              christ Wweeee
+              Since its inception, the Deborah Bless Foundation has been a
+              beacon of hope, empowering individuals and communities across
+              Nigeria.
             </p>
           </div>
         </div>
@@ -49,40 +50,50 @@ export default function ImpactPage() {
             </p>
             <div className="w-full mt-10 flex min-[997px]:flex-row flex-col ">
               <div className="">
-                <h1 className="font-medium text-lg">Our Impact Map</h1>
-                <p className="mt-2 w-[91%]  text-[14px] text-[#666666]">
-                  spreading the gospel of Jesus christ . established to carry
-                  out programs, events and conferences aimed at spreading the
-                  gospel of Jesus christ WORLDWIDE The Deborah Bless Foundation
-                  was established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ established to
-                  carry out programs, events and conferences aimed at spreading
-                  the gospel of Jesus christ WORLDWIDE The Deborah Bless
-                  Foundation was established to carry out programs, events and
-                  conferences aimed at spreading the gospel of Jesus christ.
+                <h1 className="font-semibold  text-2xl">Our Impact Map</h1>
+                <p className="mt-4 w-[91%]  text-[14px] text-[#666666]">
+                  <span className="font-semibold text-black">
+                    {" "}
+                    Baby Davida&apos;s{"   "}
+                  </span>{" "}
+                  journey is a testament to the power of proper nutrition and
+                  the life-changing impact it can have on a child’s future. From
+                  a frail, undernourished infant to a vibrant, energetic
+                  two-year-old, Davida’s transformation illustrates the profound
+                  effect that timely intervention, compassion, and support can
+                  have on the health and happiness of young children. At the
+                  Deborah Bless Foundation, we are proud to be part of her
+                  journey to health and a brighter future.
                 </p>
-                <div className="mt-4">
-                  <p className="mt-1 w-[91%]  text-[14px] text-[#666666]">
-                    <span className="font-semibold text-black">
-                      {" "}
-                      Operation OGD{"   "}
-                    </span>{" "}
-                    the gospel of Jesus christ . established to carry out
-                    programs, events and conferences aimed at spreading the
-                    gospel of Jesus christ WORLDWIDE The Deborah Bless
-                    Foundation was established to carry out programs,
-                  </p>
-                  <p className="mt-1 w-[91%]  text-[14px] text-[#666666]">
-                    <span className="font-semibold text-black">
-                      {" "}
-                      Operation SGM{"   "}
-                    </span>{" "}
-                    the gospel of Jesus christ . established to carry out
-                    programs, events and conferences aimed at spreading the
-                    gospel of Jesus christ WORLDWIDE The Deborah Bless
-                    Foundation was established to carry out programs,
-                  </p>
-                </div>
+                <p className="mt-4 w-[91%]  text-[14px] text-[#666666]">
+                  <span className="font-semibold text-black">
+                    {" "}
+                    Sunday&apos;s story{"   "}
+                  </span>{" "}
+                  is one of resilience and opportunity. With the Deborah Bless
+                  Foundation’s support, he went from struggling to make ends
+                  meet to becoming a successful small business owner. The gift
+                  of a grinding machine didn’t just provide him with a means of
+                  income—it opened the door to new opportunities for growth,
+                  independence, and a better future for his family. This simple
+                  tool is a reminder that even the smallest investment can have
+                  a monumental impact on someone’s life.
+                </p>
+                <p className="mt-4 w-[91%]  text-[14px] text-[#666666]">
+                  <span className="font-semibold text-black">
+                    {" "}
+                    Through partnerships{"   "}
+                  </span>{" "}
+                  Through partnerships like the one with Abuja Culinary School,
+                  the Deborah Bless Foundation is equipping young Nigerians with
+                  the skills they need to build a brighter future. By providing
+                  vocational training and scholarships, we are empowering the
+                  next generation to break the cycle of poverty, gain financial
+                  independence, and create lasting change in their communities.
+                  The success stories of young people like Chukwuma inspire us
+                  to continue investing in youth empowerment and the
+                  transformative power of education.
+                </p>
               </div>
               <div className="min-[997px]:mt-0 mt-10 min-[778px]:mt-20">
                 <MakeMap />
@@ -90,111 +101,9 @@ export default function ImpactPage() {
             </div>
           </div>
           <div className="w-full mt-24">
-            <div className="flex pb-10 min-[893px]:pb-0 flex-col min-[893px]:flex-row   bg-[rgba(62,77,98,0.11)] gap-10">
-              <div className="min-[893px]:w-[513px] w-full shrink-0 shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white p-2 h-[306px] min-[893px]:h-[442px]">
-                <Image
-                  src={"/image/image-six.png"}
-                  alt="Cover Image"
-                  className="filter   object-cover shrink-0 w-full h-full"
-                  width={6740}
-                  height={6740}
-                  quality={100}
-                />
-              </div>
-
-              <div className="min-[893px]:pt-16 pt-0 min-[893px]:pr-10 pl-5 min-[893px]:pl-0 pr-5 min-[1041px]:pr-40">
-                <h1 className="text-[22px] w-full min-[1041px]:w-[310px]  font-semibold">
-                  The Ashley Muntengo Project
-                </h1>
-                <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  The Deborah Bless Foundation was established to carry out
-                  programs, events and conferences aimed at spreading the gospel
-                  of Jesus christ WORLDWIDE The Deborah Bless Foundation was
-                  established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ .
-                </p>
-                <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                  Learn More
-                  <object
-                    className="w-[24px]"
-                    type="image/svg+xml"
-                    data={"/svg/arrow.svg"}
-                  ></object>
-                </p>
-              </div>
-            </div>
+            <ImpactStories />
 
             {/*  */}
-
-            <div className="flex mt-20 pb-10 min-[893px]:pb-0 flex-col min-[893px]:flex-row   bg-[rgba(62,77,98,0.11)] gap-10">
-              <div className="min-[893px]:w-[513px] w-full shrink-0 shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white p-2 h-[306px] min-[893px]:h-[442px]">
-                <Image
-                  src={"/image/image-six.png"}
-                  alt="Cover Image"
-                  className="filter   object-cover shrink-0 w-full h-full"
-                  width={6740}
-                  height={6740}
-                  quality={100}
-                />
-              </div>
-
-              <div className="min-[893px]:pt-16 pt-0 min-[893px]:pr-10 pl-5 min-[893px]:pl-0 pr-5 min-[1041px]:pr-40">
-                <h1 className="text-[22px] w-full min-[1041px]:w-[310px]  font-semibold">
-                  The Ashley Muntengo Project
-                </h1>
-                <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  The Deborah Bless Foundation was established to carry out
-                  programs, events and conferences aimed at spreading the gospel
-                  of Jesus christ WORLDWIDE The Deborah Bless Foundation was
-                  established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ .
-                </p>
-                <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                  Learn More
-                  <object
-                    className="w-[24px]"
-                    type="image/svg+xml"
-                    data={"/svg/arrow.svg"}
-                  ></object>
-                </p>
-              </div>
-            </div>
-
-            {/*  */}
-
-            <div className="flex mt-20 pb-10 min-[893px]:pb-0 flex-col min-[893px]:flex-row   bg-[rgba(62,77,98,0.11)] gap-10">
-              <div className="min-[893px]:w-[513px] w-full shrink-0 shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white p-2 h-[306px] min-[893px]:h-[442px]">
-                <Image
-                  src={"/image/image-six.png"}
-                  alt="Cover Image"
-                  className="filter   object-cover shrink-0 w-full h-full"
-                  width={6740}
-                  height={6740}
-                  quality={100}
-                />
-              </div>
-
-              <div className="min-[893px]:pt-16 pt-0 min-[893px]:pr-10 pl-5 min-[893px]:pl-0 pr-5 min-[1041px]:pr-40">
-                <h1 className="text-[22px] w-full min-[1041px]:w-[310px]  font-semibold">
-                  The Ashley Muntengo Project
-                </h1>
-                <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  The Deborah Bless Foundation was established to carry out
-                  programs, events and conferences aimed at spreading the gospel
-                  of Jesus christ WORLDWIDE The Deborah Bless Foundation was
-                  established to carry out programs, events and conferences
-                  aimed at spreading the gospel of Jesus christ .
-                </p>
-                <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                  Learn More
-                  <object
-                    className="w-[24px]"
-                    type="image/svg+xml"
-                    data={"/svg/arrow.svg"}
-                  ></object>
-                </p>
-              </div>
-            </div>
 
             {/*  */}
           </div>

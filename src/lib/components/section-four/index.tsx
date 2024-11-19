@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ref, get, query, limitToLast } from "firebase/database";
-import { db } from "@/lib/components/firebase-config";
+import { db } from "../../../../firebase-config";
 
 interface Blog {
   id: string;
@@ -113,14 +113,19 @@ export default function SectionFour() {
                   }}
                 ></div>
 
-                <Link href={`/blog/${blog.id}`}>
-                  <p className="mt-5 cursor-pointer gap-3 flex items-center text-[#F25353]">
-                    Learn More
+                <Link className="group  relative" href={`/blog/${blog.id}`}>
+                  <p className="mt-[15px] flex items-center text-[#F25353]">
+                    <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                     <object
-                      className="w-[24px]"
+                      className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
                       type="image/svg+xml"
                       data={"/svg/arrow.svg"}
                     ></object>
+                    <span className="group-hover:ml-[1rem] block">
+                      {" "}
+                      Learn More
+                    </span>
                   </p>
                 </Link>
               </div>

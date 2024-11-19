@@ -25,6 +25,16 @@ body {
     rgba(242, 83, 83, 1) 0%,
     rgba(113, 9, 9, 1) 100%
   );
+
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(
+    160deg,
+    rgba(242, 83, 83, 1) 10%,
+    rgba(113, 9, 9, 1) 100%
+  );
 }
 
 @layer utilities {

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ref, get } from "firebase/database";
 import Image from "next/image";
-import { db } from "@/lib/components/firebase-config";
+import { db } from "../../../../firebase-config";
 
 interface HoldProps {
   onNewBlogClick: () => void;
@@ -59,7 +59,7 @@ export default function Hold({ onNewBlogClick, onBlogClick }: HoldProps) {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-[#f7fafc] h-fit">
       <button
         onClick={onNewBlogClick}
         className="text-xs absolute bg-white shadow-md w-[130px] rounded-md top-[-5rem] h-[40px] left-[.3rem]"
@@ -67,7 +67,21 @@ export default function Hold({ onNewBlogClick, onBlogClick }: HoldProps) {
         New blog
       </button>
 
-      <div className="grid mt-16 grid-cols-[repeat(3,0.3fr)] grid-rows-[repeat(1,1fr)] gap-10">
+      <div
+        className="grid mt-16 
+
+        grid-cols-[repeat(1,1fr)]
+
+        min-[924px]:grid-cols-[repeat(2,1fr)]
+      
+      min-[1280px]:grid-cols-[repeat(3,3fr)] 
+      
+      min-[1582px]:grid-cols-[repeat(3,0.3fr)] 
+      
+      min-[832px]:gap-30 gap-40
+      
+      grid-rows-[repeat(1,1fr)] min-[1280px]:gap-10"
+      >
         {blogs.map((blog) => (
           <div
             key={blog.id}

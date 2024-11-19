@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { ref, get } from "firebase/database";
-import { db } from "@/lib/components/firebase-config";
+import { db } from "../../../../firebase-config";
 import Image from "next/image";
 import Button from "@/lib/components/button";
 import { MainLayout } from "@/lib/components/layout";
@@ -70,7 +70,7 @@ export default function BlogPage() {
         <div className="w-full relative min-[1161px]:pb-[8rem] pb-[18rem]">
           <div className="mt-[4rem] min-[1055px]:mt-[4rem] 3xl:pr-[17rem] 3xl:pl-[17rem] min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] relative w-full">
             <Link href="/blog">Go Back</Link>
-            <div className="w-full mt-[3rem] p-3 shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white">
+            <div className="w-full mt-[3rem] min-[1093px]:h-[690px] h-[450px] p-3 shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white">
               <Image
                 src={blog.imageURL}
                 alt="Cover Image"

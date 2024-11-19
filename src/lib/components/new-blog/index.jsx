@@ -113,7 +113,7 @@
 import { useState, useRef } from "react";
 import { getDatabase, ref, push } from "firebase/database";
 import Image from "next/image";
-import { app } from "../firebase-config"; // Import from the shared config file
+import { app } from "../../../../firebase-config"; // Import from the shared config file
 import QuillText from "../quill-text/index";
 
 // Get the Firebase database reference using the shared app initialization
@@ -124,6 +124,7 @@ export default function NewBlog({ onBack }) {
   const [date, setDate] = useState("");
   const [title, setTitle] = useState("");
   const [error, setError] = useState("");
+  const [blogType, setBlogType] = useState("Normal Blog");
   const quillRef = useRef(null); // Ref for accessing Quill editor
 
   const isValidImageURL = (url) => /\.(jpeg|jpg|gif|png|webp|svg)$/.test(url);
@@ -156,6 +157,7 @@ export default function NewBlog({ onBack }) {
           delta: deltaContent,
           html: htmlContent,
         },
+        blogType,
       });
 
       window.location.reload();
@@ -166,7 +168,7 @@ export default function NewBlog({ onBack }) {
   };
 
   return (
-    <div className="w-full p-5">
+    <div className="w-full p-1 min-[924px]:p-5">
       {/* Buttons */}
       <div className="flex gap-2 mb-4">
         <button
@@ -184,7 +186,19 @@ export default function NewBlog({ onBack }) {
       </div>
       {error && <p className="text-red-500 mt-2">{error}</p>}
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 
+        
+        pl-5 
+        
+        
+        bg-white 
+        
+        pr-5 pt-5 
+      
+      w-full
+      min-[924px]:w-[840px] h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Image URL</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
         <input
@@ -205,7 +219,15 @@ export default function NewBlog({ onBack }) {
         )}
       </div>
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+     w-full
+      min-[924px]:w-[840px]
+      
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Date</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
         <input
@@ -217,7 +239,16 @@ export default function NewBlog({ onBack }) {
         />
       </div>
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+      
+      w-full
+      min-[924px]:w-[840px]
+      
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Title</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
         <input
@@ -229,7 +260,67 @@ export default function NewBlog({ onBack }) {
         />
       </div>
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+      
+     w-full
+      min-[924px]:w-[840px]
+      
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
+        <p className="text-sm font-semibold">Blog Type</p>
+        <hr className="w-full h-[1px] mt-5 bg-gray-400" />
+
+        {/* Radio buttons for selecting blog type */}
+        <div className="flex gap-4 mt-2">
+          <label className="flex items-center">
+            <input
+              type="radio"
+              name="blogType"
+              value="Normal Blog"
+              checked={blogType === "Normal Blog"}
+              onChange={() => setBlogType("Normal Blog")}
+              className="mr-2"
+            />
+            Normal Blog
+          </label>
+          <label className="flex items-center">
+            <input
+              type="radio"
+              name="blogType"
+              value="Impact Blog"
+              checked={blogType === "Impact Blog"}
+              onChange={() => setBlogType("Impact Blog")}
+              className="mr-2"
+            />
+            Impact Blog
+          </label>
+          <label className="flex items-center">
+            <input
+              type="radio"
+              name="blogType"
+              value="Highlight Blog"
+              checked={blogType === "Highlight Blog"}
+              onChange={() => setBlogType("Highlight Blog")}
+              className="mr-2"
+            />
+            Highlight Blog
+          </label>
+        </div>
+      </div>
+
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+      
+      w-full
+      min-[924px]:w-[840px]
+      
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Blog Content</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
 
