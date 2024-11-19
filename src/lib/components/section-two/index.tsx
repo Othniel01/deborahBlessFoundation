@@ -1,5 +1,6 @@
 import Button from "@/lib/components/button";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SectionTwo() {
   return (
@@ -64,31 +65,35 @@ export default function SectionTwo() {
       sm:mt-[12rem] items-center justify-between"
       >
         <div className="">
-          <p className="text-sm text-[#F25353] font-semibold">Our Mission</p>
+          <p className="text-sm text-[#F25353] font-semibold">The Team</p>
           <h1
             className="text-3xl leading-[1.2] mt-2
           w-full 
-          min-[491px]:w-[219px]"
+          min-[491px]:w-[329px]"
           >
-            Why Do We Do What We Do ?
+            The Minds Behind The DB Foundation
           </h1>
           <p
             className="mt-[15px] text-[#666666] 
           w-full
           min-[491px]:w-[370px] min-[1132px]:w-[450px]"
           >
-            We believe every child should have a chance at a good life, good
-            food and overall a great future that is why we try everything in our
-            power to provide, nurture and cater for each child.
+            At the Deborah Bless Foundation, we are a passionate team dedicated
+            to creating lasting change in the lives of those who need it most.
+            Want to find out how you can be part of the team?
           </p>
-          <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-            Learn More
-            <object
-              className="w-[24px]"
-              type="image/svg+xml"
-              data={"/svg/arrow.svg"}
-            ></object>
-          </p>
+          <Link className="group  relative" href="/team">
+            <p className="mt-[15px] flex items-center text-[#F25353]">
+              <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+              <object
+                className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                type="image/svg+xml"
+                data={"/svg/arrow.svg"}
+              ></object>
+              <span className="group-hover:ml-[1rem] block"> Learn More</span>
+            </p>
+          </Link>
         </div>
 
         <div className="">

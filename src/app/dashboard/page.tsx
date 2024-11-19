@@ -1,20 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, signOut, User } from "firebase/auth";
-import { auth } from "@/lib/components/firebase-config";
+import { auth } from "../../../firebase-config";
 import NewBlog from "@/lib/components/new-blog/index";
 import Link from "next/link";
 import Hold from "@/lib/components/blog-dashboard";
-
-import DynamicBlog from "@/lib/components/dynamic-blog"; // Import DynamicBlog component
+import DynamicBlog from "@/lib/components/dynamic-blog";
 
 export default function Dashboard() {
   const [user, setUser] = useState<User | null>(null);
   const [isMounted, setIsMounted] = useState(false);
-  const [showNewBlog, setShowNewBlog] = useState(false); // State to toggle between Hold and NewBlog
-  const [selectedBlogId, setSelectedBlogId] = useState<string | null>(null); // Store the selected blog id
+  const [showNewBlog, setShowNewBlog] = useState(false);
+  const [selectedBlogId, setSelectedBlogId] = useState<string | null>(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu visibility
   const router = useRouter();
 
   useEffect(() => {
@@ -45,13 +46,13 @@ export default function Dashboard() {
   };
 
   const handleNewBlogClick = () => {
-    setSelectedBlogId(null); // Reset selected blog when creating a new blog
-    setShowNewBlog(true); // Show NewBlog component
+    setSelectedBlogId(null);
+    setShowNewBlog(true);
   };
 
   const handleBlogClick = async (blogId: string) => {
-    setShowNewBlog(false); // Hide NewBlog and show the DynamicBlog
-    setSelectedBlogId(blogId); // Store the selected blogId
+    setShowNewBlog(false);
+    setSelectedBlogId(blogId);
   };
 
   if (!isMounted) {
@@ -63,54 +64,85 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="w-full bg-[#f7fafc] h-fit pb-10">
-      <div className="w-full bg-white fixed z-50 h-[70px] shadow-md"></div>
-      <div className="flex w-full flex-row">
-        <div className="bg-white z-30 left-0 top-0 fixed h-[100vh] pl-[1rem] pr-[1rem] pt-[8rem] w-[250px]">
-          <Link
-            className="text-sm hover:bg-[#e8ebec] rounded-md h-[40px] pl-3 flex gap-2 items-center"
-            href="/dashboard"
-          >
-            <object
-              className="w-[20px]"
-              type="image/svg+xml"
-              data={"/svg/message.svg"}
-            ></object>
-            <p>Blogs</p>
-          </Link>
+    <div className="w-full bg-[#f7fafc] h-fit pb-10 relative">
+      {/* Top Bar */}
+      <div className="w-full pr-[3rem] pl-[3rem] bg-white fixed z-50 h-[70px] shadow-md flex items-center justify-between">
+        <Image
+          src={"/image/db-logo.png"}
+          alt="Cover Image"
+          className="filter object-cover w-[120px]"
+          width={2740}
+          height={2740}
+          quality={75}
+        />
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="text-sm px-4 py-2 bg-black text-white rounded-md hover:opacity-80"
+        >
+          Menu
+        </button>
+      </div>
 
-          <button
-            onClick={handleLogout}
-            className="text-sm hover:bg-[#e8ebec] rounded-md h-[40px] w-full pl-3 flex gap-2 items-center mt-4"
-          >
-            <object
-              className="w-[20px]"
-              type="image/svg+xml"
-              data={"/svg/logout.svg"}
-            ></object>
-            Logout
-          </button>
-        </div>
-        <div className="bg-white h-[100vh] w-[250px]"></div>
+      {/* Overlay */}
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={() => setIsMenuOpen(false)}
+        ></div>
+      )}
 
-        <div className="p-10 pl-16 pt-28 w-full relative">
-          {/* Render Hold, NewBlog, or DynamicBlog based on state */}
-          {!selectedBlogId ? (
-            !showNewBlog ? (
-              <Hold
-                onNewBlogClick={handleNewBlogClick}
-                onBlogClick={handleBlogClick}
-              />
-            ) : (
-              <NewBlog onBack={() => setShowNewBlog(false)} />
-            )
+      {/* Side Menu */}
+      <div
+        className={`fixed z-50 left-0 top-0 h-full bg-white pl-4 pr-4 pt-[8rem] transition-transform duration-300 ${
+          isMenuOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
+        style={{ width: "250px" }}
+      >
+        <Link
+          className="text-sm hover:bg-[#e8ebec] rounded-md h-[40px] pl-3 flex gap-2 items-center"
+          href="/dashboard"
+        >
+          <object
+            className="w-[20px]"
+            type="image/svg+xml"
+            data={"/svg/message.svg"}
+          ></object>
+          <p>Blogs</p>
+        </Link>
+        <button
+          onClick={handleLogout}
+          className="text-sm hover:bg-[#e8ebec] rounded-md h-[40px] w-full pl-3 flex gap-2 items-center mt-4"
+        >
+          <object
+            className="w-[20px]"
+            type="image/svg+xml"
+            data={"/svg/logout.svg"}
+          ></object>
+          Logout
+        </button>
+      </div>
+
+      {/* Main Content */}
+      <div
+        className="h-full pl-4
+      
+      min-[924px]:pl-10 min-[1582px]:pl-16 pt-28 w-full relative"
+      >
+        {!selectedBlogId ? (
+          !showNewBlog ? (
+            <Hold
+              onNewBlogClick={handleNewBlogClick}
+              onBlogClick={handleBlogClick}
+            />
           ) : (
-            <DynamicBlog
-              blogId={selectedBlogId}
-              onBack={() => setSelectedBlogId(null)} // Set back to null to render Hold
-            /> // Show the DynamicBlog with the selected blogId
-          )}
-        </div>
+            <NewBlog onBack={() => setShowNewBlog(false)} />
+          )
+        ) : (
+          <DynamicBlog
+            blogId={selectedBlogId}
+            onBack={() => setSelectedBlogId(null)}
+          />
+        )}
       </div>
     </div>
   );

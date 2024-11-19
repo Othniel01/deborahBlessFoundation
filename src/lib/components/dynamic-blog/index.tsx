@@ -5,7 +5,7 @@ import { getDatabase, ref, get, set, remove } from "firebase/database";
 import Image from "next/image";
 import QuillText from "../quill-text/index";
 import Quill from "quill";
-import { app } from "../firebase-config";
+import { app } from "../../../../firebase-config";
 
 const db = getDatabase(app);
 
@@ -92,7 +92,7 @@ export default function DynamicBlog({
     /\.(jpeg|jpg|gif|png|webp|svg)$/.test(url);
 
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <button
         className="bg-gray-700 text-white rounded-md text-sm h-[40px] w-[120px] mb-4"
         onClick={onBack} // Trigger onBack to go back to Hold
@@ -114,7 +114,14 @@ export default function DynamicBlog({
 
       {error && <p className="text-red-500 mt-2">{error}</p>}
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+      w-full
+      min-[924px]:w-[840px]
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Image URL</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
         <input
@@ -135,7 +142,14 @@ export default function DynamicBlog({
         )}
       </div>
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+       w-full
+      min-[924px]:w-[840px]
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Date</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
         <input
@@ -147,7 +161,15 @@ export default function DynamicBlog({
         />
       </div>
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+      
+     w-full
+      min-[924px]:w-[840px]
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Title</p>
         <hr className="w-full h-[1px] mt-5 bg-gray-400" />
         <input
@@ -159,7 +181,14 @@ export default function DynamicBlog({
         />
       </div>
 
-      <div className="mt-5 pl-5 bg-white pr-5 pt-5 w-[840px] h-fit pb-5 rounded-md shadow-md">
+      <div
+        className="mt-5 pl-5 bg-white pr-5 pt-5 
+      
+       w-full
+      min-[924px]:w-[840px]
+      
+      h-fit pb-5 rounded-md shadow-md"
+      >
         <p className="text-sm font-semibold">Blog Content</p>
 
         {/* Quill Text Editor */}

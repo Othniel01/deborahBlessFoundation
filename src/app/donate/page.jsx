@@ -27,10 +27,9 @@ export default function DonatePage() {
               Contribute To Our Mission
             </h1>
           </div>
-          <div className="flex mt-[5rem] justify-between">
+          <div className="flex mt-[5rem]  justify-between">
             <div>
-              {/* Embed the Donorbox form here */}
-              <div className="w-[550px]">
+              <div className="w-[570px]">
                 <iframe
                   src="https://donorbox.org/embed/the-deborah-blessed-foundation?language=en-us"
                   name="donorbox"
