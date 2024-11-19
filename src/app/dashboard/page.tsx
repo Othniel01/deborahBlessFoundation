@@ -5,10 +5,22 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, signOut, User } from "firebase/auth";
 import { auth } from "../../../firebase-config";
-import NewBlog from "@/lib/components/new-blog/index";
+// import NewBlog from "@/lib/components/new-blog/index";
 import Link from "next/link";
-import Hold from "@/lib/components/blog-dashboard";
-import DynamicBlog from "@/lib/components/dynamic-blog";
+// import Hold from "@/lib/components/blog-dashboard";
+// import DynamicBlog from "@/lib/components/dynamic-blog";
+
+import dynamic from "next/dynamic";
+
+const DynamicBlog = dynamic(() => import("@/lib/components/dynamic-blog"), {
+  ssr: false,
+});
+const Hold = dynamic(() => import("@/lib/components/blog-dashboard"), {
+  ssr: false,
+});
+const NewBlog = dynamic(() => import("@/lib/components/new-blog/index"), {
+  ssr: false,
+});
 
 export default function Dashboard() {
   const [user, setUser] = useState<User | null>(null);
