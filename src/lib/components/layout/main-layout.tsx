@@ -273,7 +273,7 @@ function MainLayout({ children }: MainLayoutProps) {
 
           <div className="flex 3xl:pr-[18rem] 3xl:pl-[18rem] sm:flex-row flex-col min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] left-0 bottom-[4rem] w-full absolute items-center justify-between">
             <div className="w-full bg-[#181818] flex justify-center items-center h-[80px]">
-              <p className="text-white text-xs sm:text-sm">
+              <p className="text-white text-[10px] sm:text-sm">
                 © Copyright{" "}
                 <span className="font-bold">thedeborahblessfoundation</span> All
                 Rights Reserved

@@ -27,9 +27,18 @@ export default function DonatePage() {
               Contribute To Our Mission
             </h1>
           </div>
-          <div className="flex mt-[5rem]  justify-between">
+          <div className="flex flex-col min-[940px]:flex-row mt-[5rem] gap-20 min-[940px]:gap-0 items-center justify-between">
             <div>
-              <div className="w-[570px]">
+              <div
+                className="
+              
+
+                w-full
+
+              min-[451px]:w-[420px]
+              
+              min-[1153px]:w-[570px]"
+              >
                 <iframe
                   src="https://donorbox.org/embed/the-deborah-blessed-foundation?language=en-us"
                   name="donorbox"
@@ -49,7 +58,16 @@ export default function DonatePage() {
               </div>
             </div>
             <div>
-              <div className="w-[530px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white p-2 h-[630px]">
+              <div
+                className=" 
+
+              w-full
+              
+                min-[451px]:w-[430px]  
+              
+              
+              min-[1153px]:w-[530px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white p-2 h-[630px]"
+              >
                 <Image
                   src={"/image/image-three.png"}
                   alt="Cover Image"
