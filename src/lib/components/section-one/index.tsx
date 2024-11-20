@@ -24,7 +24,7 @@ export default function FirstSection() {
           to inspire change that lasts
         </p>
         <Button className="mt-10 w-[142px] h-[49px] btn-gradient">
-          Donate Now
+          <Link href="/donate">Donate Now</Link>
         </Button>
       </div>
 

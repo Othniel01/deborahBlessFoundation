@@ -76,7 +76,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="w-full bg-[#f7fafc] h-fit pb-10 relative">
+    <div className="w-full  h-fit pb-10 relative">
       {/* Top Bar */}
       <div className="w-full pr-[3rem] pl-[3rem] bg-white fixed z-50 h-[70px] shadow-md flex items-center justify-between">
         <Image

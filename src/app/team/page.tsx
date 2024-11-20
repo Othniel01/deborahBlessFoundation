@@ -13,7 +13,9 @@ export default function Team() {
             <div className="w-full">
               <div className="w-full mt-[3rem] p-3 min-[1093px]:h-[690px] h-[450px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] bg-white">
                 <Image
-                  src={"/image/image-ten.jpg"}
+                  src={
+                    "https://res.cloudinary.com/dci2ylcbr/image/upload/v1732143604/new_ndop6h.jpg"
+                  }
                   alt="Cover Image"
                   className="filter  object-cover w-full h-full"
                   width={2740}
@@ -132,7 +134,7 @@ export default function Team() {
                 </h1>
                 <p className="mt-2">Chief Program Officer, The DB Foundation</p>
                 <p className="mt-4 text-[#666666] w-full text-[14px]">
-                  Mariam Adeiza is a skilled administrator with 5 years of
+                  Mariam Raji is a skilled administrator with 5 years of
                   experience as a Program Assistant. A proficient data analyst,
                   she has worked with Prohealth International and the UN World
                   Food Program. She also served as an Administrative Assistant
@@ -173,7 +175,11 @@ export default function Team() {
                     Get Involved
                   </h1>
 
-                  <Link className="group  relative" href="">
+                  <Link
+                    className="group  relative"
+                    target="_blank"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeyts79Tw5qLhgco3hxAxjzYs1YYA2SdnB8iUJB7ka0cKAIfA/viewform"
+                  >
                     <p className="mt-[15px] flex items-center text-[#F25353]">
                       <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                       <object
@@ -200,7 +206,7 @@ export default function Team() {
                     Support DBF
                   </h1>
 
-                  <Link className="group  relative" href="">
+                  <Link className="group  relative" href="/donate">
                     <p className="mt-[15px] flex items-center text-[#F25353]">
                       <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                       <object
@@ -227,7 +233,7 @@ export default function Team() {
                     Buy A Plate
                   </h1>
 
-                  <Link className="group  relative" href="">
+                  <Link className="group  relative" href="/donate">
                     <p className="mt-[15px] flex items-center text-[#F25353]">
                       <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                       <object
