@@ -139,7 +139,11 @@ export default function ImpactPage() {
                     Get Involved
                   </h1>
 
-                  <Link className="group  relative" href="">
+                  <Link
+                    className="group  relative"
+                    target="_blank"
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSeyts79Tw5qLhgco3hxAxjzYs1YYA2SdnB8iUJB7ka0cKAIfA/viewform"
+                  >
                     <p className="mt-[15px] flex items-center text-[#F25353]">
                       <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                       <object
@@ -166,7 +170,7 @@ export default function ImpactPage() {
                     Support DBF
                   </h1>
 
-                  <Link className="group  relative" href="">
+                  <Link className="group  relative" href="/donate">
                     <p className="mt-[15px] flex items-center text-[#F25353]">
                       <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                       <object
@@ -193,7 +197,7 @@ export default function ImpactPage() {
                     Buy A Plate
                   </h1>
 
-                  <Link className="group  relative" href="">
+                  <Link className="group  relative" href="/donate">
                     <p className="mt-[15px] flex items-center text-[#F25353]">
                       <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
                       <object

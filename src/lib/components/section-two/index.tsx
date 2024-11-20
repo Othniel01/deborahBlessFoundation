@@ -54,7 +54,7 @@ export default function SectionTwo() {
             programs to our on-the-ground initiatives.
           </p>
           <Button className="mt-10 w-[142px] h-[49px] btn-gradient">
-            Learn More
+            <Link href="/about">Learn More</Link>
           </Button>
         </div>
       </div>

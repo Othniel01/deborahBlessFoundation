@@ -25,7 +25,7 @@ function MainLayout({ children }: MainLayoutProps) {
         <div className="flex gap-2 items-center">
           <Image
             alt="db-logo"
-            className="w-[100px]"
+            className="w-[120px]"
             src="/image/db-logo.png"
             width={1700}
             height={1700}
@@ -77,7 +77,9 @@ function MainLayout({ children }: MainLayoutProps) {
         </div>
 
         <Button className="btn-gradient hidden min-[1095px]:block">
-          Contact us
+          <Link target="_blank" href="https://forms.gle/k3oq6TWuTgsbNtXU9">
+            Contact us
+          </Link>
         </Button>
       </div>
 
@@ -249,7 +251,7 @@ function MainLayout({ children }: MainLayoutProps) {
                     type="image/svg+xml"
                     data={"/svg/location.svg"}
                   ></object>
-                  MIB Plaza No 23, Gwarinpa Nigeria
+                  MIB Plaza No 23, 1st Avenue Gwarinpa Nigeria
                 </p>
                 <p className="flex mt-2 text-sm  font-normal flex-row gap-3">
                   <object
@@ -257,7 +259,7 @@ function MainLayout({ children }: MainLayoutProps) {
                     type="image/svg+xml"
                     data={"/svg/mail.svg"}
                   ></object>
-                  info@thedb.com
+                  deborahblessfoundation@gmail.com
                 </p>
                 <p className="flex mt-2 text-sm  font-normal flex-row gap-3">
                   <object
@@ -265,7 +267,7 @@ function MainLayout({ children }: MainLayoutProps) {
                     type="image/svg+xml"
                     data={"/svg/phone.svg"}
                   ></object>
-                  +234 0000 0000
+                  +234-9016 292 9162
                 </p>
               </div>
             </div>

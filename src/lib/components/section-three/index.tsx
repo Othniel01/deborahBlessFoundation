@@ -3,6 +3,7 @@ import Image from "next/image";
 import Button from "@/lib/components/button";
 import Highlight from "@/lib/components/highlight";
 import Numbers from "@/lib/components/numbers";
+import Link from "next/link";
 
 export default function SectionThree() {
   return (
@@ -58,7 +59,9 @@ export default function SectionThree() {
           </div>
 
           <Button className="w-[142px] h-[49px] btn-gradient">
-            Partner with us
+            <Link target="_blank" href="https://forms.gle/k3oq6TWuTgsbNtXU9">
+              Partner with us
+            </Link>
           </Button>
         </div>
       </div>

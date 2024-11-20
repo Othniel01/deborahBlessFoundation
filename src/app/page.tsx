@@ -6,6 +6,7 @@ import SectionTwo from "@/lib/components/section-two";
 // import Button from "@/lib/components/button";
 import SectionFour from "@/lib/components/section-four";
 import { MainLayout } from "@/lib/components/layout";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -31,7 +32,8 @@ export default function Home() {
             </h1>
           </div>
           <div className="w-full mt-32  relative">
-            <div
+            <Link
+              href="/donate"
               className="btn-gradient cursor-pointer mx-auto my-0 inset-x-0 absolute top-[-90px] rounded-full w-[150px] h-[150px] min-[890px]:w-[160px] min-[890px]:h-[160px] flex flex-col z-20 justify-center items-center border-[8px] 
           min-[890px]:border-[8px] border-solid border-white"
             >
@@ -46,7 +48,7 @@ export default function Home() {
                   ></object>
                 </span>
               </div>
-            </div>
+            </Link>
             <ImageCarousel />
             <div className="bg-white hidden min-[582px]:block  mx-auto my-0 inset-x-0 rounded-[51%_49%_50%_50%_/_56%_56%_44%_44%] w-full absolute h-[120px]  bottom-[-61px] "></div>
             {/* <div className="bottom-[-230px] overflow-hidden bg-clip-content   w-full absolute">

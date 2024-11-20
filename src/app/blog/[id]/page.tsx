@@ -133,16 +133,28 @@ export default function BlogPage() {
                     <h1 className="mt-[15px] font-semibold text-2xl">
                       Get Involved
                     </h1>
-                    <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                      Learn More
-                      <object
-                        className="w-[24px]"
-                        type="image/svg+xml"
-                        data={"/svg/arrow.svg"}
-                      ></object>
-                    </p>
+                    <Link
+                      className="group  relative"
+                      target="_blank"
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSeyts79Tw5qLhgco3hxAxjzYs1YYA2SdnB8iUJB7ka0cKAIfA/viewform"
+                    >
+                      <p className="mt-[15px] flex items-center text-[#F25353]">
+                        <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                        <object
+                          className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                          type="image/svg+xml"
+                          data={"/svg/arrow.svg"}
+                        ></object>
+                        <span className="group-hover:ml-[1rem] block">
+                          {" "}
+                          Learn More
+                        </span>
+                      </p>
+                    </Link>
                   </div>
-                  <div>
+
+                  <div className="">
                     <object
                       className="w-[51px]"
                       type="image/svg+xml"
@@ -151,16 +163,25 @@ export default function BlogPage() {
                     <h1 className="mt-[15px] font-semibold text-2xl">
                       Support DBF
                     </h1>
-                    <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                      Learn More
-                      <object
-                        className="w-[24px]"
-                        type="image/svg+xml"
-                        data={"/svg/arrow.svg"}
-                      ></object>
-                    </p>
+
+                    <Link className="group  relative" href="/donate">
+                      <p className="mt-[15px] flex items-center text-[#F25353]">
+                        <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                        <object
+                          className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                          type="image/svg+xml"
+                          data={"/svg/arrow.svg"}
+                        ></object>
+                        <span className="group-hover:ml-[1rem] block">
+                          {" "}
+                          Learn More
+                        </span>
+                      </p>
+                    </Link>
                   </div>
-                  <div>
+
+                  <div className="">
                     <object
                       className="w-[51px]"
                       type="image/svg+xml"
@@ -169,14 +190,22 @@ export default function BlogPage() {
                     <h1 className="mt-[15px] font-semibold text-2xl">
                       Buy A Plate
                     </h1>
-                    <p className="mt-[15px] gap-3 flex items-center text-[#F25353]">
-                      Learn More
-                      <object
-                        className="w-[24px]"
-                        type="image/svg+xml"
-                        data={"/svg/arrow.svg"}
-                      ></object>
-                    </p>
+
+                    <Link className="group  relative" href="/donate">
+                      <p className="mt-[15px] flex items-center text-[#F25353]">
+                        <span className="w-[0px] block transition-all  duration-[0.1s] group-hover:w-[24px]"></span>
+                        <object
+                          className="transition-all pointer-events-none absolute  duration-[0.1s] ease-[ease-in-out]  w-[24px] group-hover:translate-x-[0px]
+              group-hover:opacity-[1] opacity-[0] translate-x-[-15px] h-[24px]"
+                          type="image/svg+xml"
+                          data={"/svg/arrow.svg"}
+                        ></object>
+                        <span className="group-hover:ml-[1rem] block">
+                          {" "}
+                          Learn More
+                        </span>
+                      </p>
+                    </Link>
                   </div>
                 </div>
               </div>

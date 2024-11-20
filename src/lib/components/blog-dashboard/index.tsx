@@ -59,7 +59,7 @@ export default function Hold({ onNewBlogClick, onBlogClick }: HoldProps) {
   };
 
   return (
-    <div className="relative bg-[#f7fafc] h-fit">
+    <div className="relative  h-fit">
       <button
         onClick={onNewBlogClick}
         className="text-xs absolute bg-white shadow-md w-[130px] rounded-md top-[-5rem] h-[40px] left-[.3rem]"
