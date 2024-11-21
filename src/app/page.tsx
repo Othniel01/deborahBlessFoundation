@@ -22,14 +22,19 @@ export default function Home() {
           <hr className="w-[1px] block h-[70vh] bg-[#ECECEC]" />
         </div>
         <div className="relative w-full">
-          <div className="w-full flex mt-24 min-[431px]:mt-28 justify-center  ">
-            <h1 className="min-[890px]:text-[55px] min-[890px]:pl-0 min-[890px]:pr-0 pl-8 pr-8 text-[38px] text-[#3E3E3E] font-light text-center leading-[1.2] w-[1100px] ">
-              <span className="font-semibold text-[#F25353]  ">
-                EMPOWERING LIVES
-              </span>
-              , FIGHTING MALNUTRITION,
-              <span className="font-semibold"> REDUCING CHILD MORTALITY</span>
-            </h1>
+          <div className="w-full flex  flex-col items-center mt-24 min-[431px]:mt-28">
+            <p className="sm:text-sm text-xs font-semibold text-[#3E3E3E]  tracking-[2px]">
+              THE DEBORAH BLESS FOUNDATION
+            </p>
+            <div className="w-full flex justify-center  ">
+              <h1 className="min-[890px]:text-[55px] mt-1 min-[890px]:pl-0 min-[890px]:pr-0 pl-8 pr-8 text-[38px] text-[#3E3E3E] font-light text-center leading-[1.2] w-[1100px] ">
+                <span className="font-semibold text-[#F25353]">
+                  EMPOWERING LIVES
+                </span>
+                , FIGHTING MALNUTRITION,
+                <span className="font-semibold"> REDUCING CHILD MORTALITY</span>
+              </h1>
+            </div>
           </div>
           <div className="w-full mt-32  relative">
             <Link
