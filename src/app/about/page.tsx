@@ -2,6 +2,7 @@ import SectionFour from "@/lib/components/section-four";
 import Image from "next/image";
 import Button from "@/lib/components/button";
 import { MainLayout } from "@/lib/components/layout";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -500,7 +501,12 @@ export default function AboutPage() {
               </div>
 
               <Button className="w-[142px] h-[49px] btn-gradient">
-                Partner with us
+                <Link
+                  target="_blank"
+                  href="https://forms.gle/k3oq6TWuTgsbNtXU9"
+                >
+                  Partner with us
+                </Link>
               </Button>
             </div>
           </div>
