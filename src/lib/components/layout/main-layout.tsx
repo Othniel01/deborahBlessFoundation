@@ -154,21 +154,21 @@ function MainLayout({ children }: MainLayoutProps) {
 
       <div
         className="w-full relative flex flex-col 
-         min-[870px]:h-[500px] sm:h-[700px] h-[980px]  min-[507px]:mt-10 mt-10 bg-[#131313]"
+         min-[924px]:h-[500px] sm:h-[700px] h-[980px]  min-[507px]:mt-10 mt-10 bg-[#131313]"
       >
         <div className=" w-full pt-[6rem]   3xl:pr-[18rem] 3xl:pl-[18rem]   min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem]  h-fit pb-16">
           <div
             className="flex gap-20  
-              min-[870px]:gap-0  justify-between 
-               min-[870px]:items-start items-center
-            min-[870px]:flex-row flex-col"
+              min-[924px]:gap-0  justify-between 
+               min-[924px]:items-start 
+            min-[924px]:flex-row flex-col"
           >
             <div className="text-white">
               <h1
-                className="text-2xl font-semibold w-[full]
+                className="text-2xl font-semibold w-[full] 
                 min-[982px]:w-[490px]"
               >
-                The Deborah Bless Foundation
+                The Deborah Bless <br /> Foundation
               </h1>
               <p
                 className="mt-4 font-normal text-sm  w-[280px]  
@@ -233,7 +233,7 @@ function MainLayout({ children }: MainLayoutProps) {
               min-[1066px]:gap-40"
             >
               <div className=" flex w-[99px] flex-col gap-2 text-white">
-                <h1 className="text-lg font-semibold">Short Links</h1>
+                <h1 className="text-lg w-[99px] font-semibold">Short Links</h1>
 
                 <Link href="/blog">
                   <h1 className="text-sm  font-normal">Blog</h1>
@@ -282,7 +282,7 @@ function MainLayout({ children }: MainLayoutProps) {
             </div>
           </div>
 
-          <div className="flex 3xl:pr-[18rem] 3xl:pl-[18rem] sm:flex-row flex-col min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] left-0 bottom-[4rem] w-full absolute items-center justify-between">
+          <div className="flex 3xl:pr-[18rem] 3xl:pl-[18rem] sm:flex-row flex-col min-[1536px]:pl-[14rem] min-[1536px]:pr-[14rem] min-[1332px]:pl-[8rem] min-[1332px]:pr-[8rem] pl-[2rem] pr-[2rem] left-0 bottom-[3rem] w-full absolute items-center justify-between">
             <div className="w-full bg-[#181818] flex justify-center items-center h-[80px]">
               <p className="text-white text-[10px] sm:text-sm">
                 © Copyright{" "}
