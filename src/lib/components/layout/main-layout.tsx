@@ -180,7 +180,7 @@ function MainLayout({ children }: MainLayoutProps) {
               </p>
 
               <div className="mt-4 flex gap-4 items-center">
-                <Link href="">
+                <Link target="_blank" href="https://twitter.com/Dblessdevotion">
                   <div className="ring-1 rounded-full p-3 ring-white ">
                     <object
                       className="w-[18px] pointer-events-none"
@@ -189,7 +189,10 @@ function MainLayout({ children }: MainLayoutProps) {
                     ></object>
                   </div>
                 </Link>
-                <Link href="">
+                <Link
+                  target="_blank"
+                  href="https://www.instagram.com/dblessdevotion"
+                >
                   <div className="ring-1 rounded-full p-3 ring-white ">
                     <object
                       className="w-[18px] pointer-events-none"
@@ -198,7 +201,10 @@ function MainLayout({ children }: MainLayoutProps) {
                     ></object>
                   </div>
                 </Link>
-                <Link href="">
+                <Link
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=61558369198106"
+                >
                   <div className="ring-1 rounded-full p-3 ring-white ">
                     <object
                       className="w-[18px] pointer-events-none"
@@ -207,12 +213,15 @@ function MainLayout({ children }: MainLayoutProps) {
                     ></object>
                   </div>
                 </Link>
-                <Link href="">
+                <Link
+                  target="_blank"
+                  href="https://www.tiktok.com/@dblessdevotional"
+                >
                   <div className="ring-1 rounded-full p-3 ring-white ">
                     <object
                       className="w-[18px] pointer-events-none"
                       type="image/svg+xml"
-                      data={"/svg/linkedin.svg"}
+                      data={"/svg/tiktok.svg"}
                     ></object>
                   </div>
                 </Link>
@@ -259,7 +268,7 @@ function MainLayout({ children }: MainLayoutProps) {
                     type="image/svg+xml"
                     data={"/svg/mail.svg"}
                   ></object>
-                  deborahblessfoundation@gmail.com
+                  info@deborahblessfoundation.com
                 </p>
                 <p className="flex mt-2 text-sm  font-normal flex-row gap-3">
                   <object
