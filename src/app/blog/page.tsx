@@ -98,9 +98,26 @@ export default function Blog() {
                 : blogs.map((blog) => (
                     <div
                       key={blog.id}
-                      className="min-[1821px]:w-[403px] min-[1621px]:w-[380px] min-[1373px]:w-[360px] min-[1061px]:w-[330px] w-full"
+                      className="min-[1821px]:w-[403px] min-[1621px]:w-[380px] min-[1373px]:w-[360px] min-[1085px]:w-[330px] w-full"
                     >
-                      <div className="min-[1061px]:w-[403px] w-full min-[1061px]:h-[189px] bg-white p-2 h-[320px] sm:h-[470px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] rounded-t-[0px]">
+                      <div
+                        className="
+                      
+                      
+                      min-[1653px]:w-[403px]
+                
+min-[1561px]:w-[372px]
+
+min-[1105px]:w-[342px]
+
+min-[1085px]:w-[332px]
+
+w-full
+                      
+                      
+                      
+                      min-[1085px]:h-[189px] bg-white p-2 h-[320px] sm:h-[470px] shadow-[2px_6px_27px_-6px_rgba(0,0,0,0.3)] rounded-t-[0px]"
+                      >
                         <Image
                           src={blog.imageURL}
                           alt="Cover Image"
